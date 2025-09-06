@@ -1,2 +1,3 @@
 /target
 .env
+sealed_bid_auction.wasm

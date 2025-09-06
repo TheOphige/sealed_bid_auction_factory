@@ -11,6 +11,7 @@
 
 extern crate alloc;
 
+use alloc::vec;
 use alloc::vec::Vec;
 use stylus_sdk::{
     alloy_primitives::{Address, B256, U256},
@@ -20,9 +21,8 @@ use stylus_sdk::{
     prelude::*,
 };
 
-// 👉 Point this to the compiled instance bytecode you build in a sibling crate
-//    e.g., ../sealed_bid_auction/target/wasm32-unknown-unknown/release/sealed_bid_auction.wasm
-static SEALED_BID_AUCTION_WASM: &[u8] = include_bytes!("../sealed_bid_auction.wasm");
+// Import the compiled sealed-bid auction WASM bytecode at compile time
+static SEALED_BID_AUCTION_WASM: &[u8] = include_bytes!("sealed_bid_auction.wasm");
 
 sol_storage! {
     #[entrypoint]

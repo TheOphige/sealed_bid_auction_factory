@@ -57,7 +57,7 @@ cd ../sealed_bid_auction_factory
 rustup target add wasm32-unknown-unknown
 cargo install cargo-stylus
 cargo stylus check
-```
+``` 
 
 ⚠️ The factory embeds:
 
